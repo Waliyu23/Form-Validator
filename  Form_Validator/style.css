@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 420px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.form {
+    padding: 0 1.5rem;
+}
+
+.form-control {
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.form-control label {
+    color: #4a5568;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-control input {
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.form-control.success input {
+    border-color: #48bb78;
+}
+
+.form-control.error input {
+    border-color: #f56565;
+}
+
+.form-control small {
+    color: #f56565;
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+    visibility: hidden;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: #4299e1;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    display: block;
+    font-size: 1rem;
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form button:hover {
+    background-color: #3182ce;
+    transform: translateY(-2px);
+}
+
+.form button:active {
+    transform: translateY(0);
+}
+
+/* Adding some animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+    
+    .form {
+        padding: 0;
+    }
+}
